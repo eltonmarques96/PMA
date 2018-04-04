@@ -1,0 +1,11 @@
+﻿analytics.png --> Icons made by https://www.flaticon.com/authors/prosymbols from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+box.png --> Icons made by https://www.flaticon.com/authors/ddara from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+chat.png --> Icons made by https://www.flaticon.com/authors/prosymbols from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+info.png --> Icons made by http://www.freepik.com from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+padlock_blue.png --> Icons made by https://www.flaticon.com/authors/dave-gandy from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+padlock_red.png --> Icons made by https://www.flaticon.com/authors/dave-gandy from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+padlock_white.png --> Icons made by https://www.flaticon.com/authors/dave-gandy from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+search.png --> Icons made by http://www.freepik.com from https://www.flaticon.com/ is licensed by http://creativecommons.org/licenses/by/3.0/
+
+
+

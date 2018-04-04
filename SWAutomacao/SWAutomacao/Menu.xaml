@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWAutomacao.Menu"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <!--<ScrollView>-->
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" TextColor="Black" FontSize="Large" FontFamily="{StaticResource BoldFont}" Text="PLANTA DE MANUFATURA AVANÇADA E SEGURANÇA CIBERNÉTICA INDUSTRIAL" HorizontalTextAlignment="Center"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Row="0" Grid.Column="0" HeightRequest="108" HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="BoxClick" 
+                        NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="BoxBtn" Grid.Row="0" Grid.Column="0" Source="box.png"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Pedido" HorizontalOptions="Center" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="1" HeightRequest="108" HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                Tapped="AnalyticsClick"
+                NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="AnalyticsBtn" Grid.Row="0" Source="analytics.png"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Gráfico" HorizontalOptions="Center" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="2" HeightRequest="108" HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="ChatClick"
+                    NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="ChatBtn" Grid.Row="0" Source="chat.png" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="Chat" HorizontalOptions="Center" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="3" HeightRequest="108" HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="SearchClick"
+                    NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="SearchBtn" Grid.Row="0" Source="search.png"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Pesquisar" HorizontalOptions="Center" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="4" HeightRequest="108" HorizontalOptions="Center" VerticalOptions="Center">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="InfoClick"
+                    NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="InfoBtn" Grid.Row="0" Source="info.png"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Ajuda" HorizontalOptions="Center" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="1" Grid.Column="0" WidthRequest="144" HeightRequest="40" Source="logo_TiSafe.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="Start" />
+            <Image Grid.Row="1" Grid.Column="1" WidthRequest="144" HeightRequest="40" Source="senai.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="Center" />
+            <Image Grid.Row="1" Grid.Column="2" WidthRequest="144" HeightRequest="40" Source="Rockwell_Automation_logo.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End" />
+        </Grid>
+    </StackLayout>
+    <!--</ScrollView>-->
+</ContentPage>

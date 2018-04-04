@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SWAutomacao"
+             x:Class="SWAutomacao.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Grid>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" TextColor="Black" FontSize="Large" FontFamily="{StaticResource BoldFont}" Text="PLANTA DE MANUFATURA AVANÇADA E SEGURANÇA CIBERNÉTICA INDUSTRIAL" HorizontalTextAlignment="Center"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Frame x:Name="BluePadlock" Grid.Row="0" Grid.Column="2" HeightRequest="96" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnClickBluePadlock" 
+                            NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Source="padlock_blue.png"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="Azul" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="WhitePadlock" Grid.Row="0" Grid.Column="1" HeightRequest="96" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnClickWhitePadlock" 
+                            NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Source="padlock_white.png" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Branco" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="RedPadlock" Grid.Row="0" Grid.Column="0" HeightRequest="96" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnClickRedPadlock" 
+                            NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Source="padlock_red.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="Vermelho" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+            <!--
+                <Button x:Name="opt_1" Text="OPÇÃO 1" Clicked="OnClickFirst" />
+                <Button x:Name="opt_2" Text="OPÇÃO 2" Clicked="OnClickSecond" />
+                <Button x:Name="opt_3" Text="OPÇÃO 3" Clicked="OnClickThird" />
+            -->
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="1" Grid.Column="0" WidthRequest="144" HeightRequest="40" Source="logo_TiSafe.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="Start" />
+            <Image Grid.Row="1" Grid.Column="1" WidthRequest="144" HeightRequest="40" Source="senai.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="Center" />
+            <Image Grid.Row="1" Grid.Column="2" WidthRequest="144" HeightRequest="40" Source="Rockwell_Automation_logo.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End" />
+        </Grid>
+
+        </StackLayout>
+    </Grid>
+
+
+    
+</ContentPage>
