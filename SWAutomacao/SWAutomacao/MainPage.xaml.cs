@@ -11,7 +11,7 @@ namespace SWAutomacao
     public partial class MainPage : ContentPage
     {
         public static HttpClient webService = new HttpClient();
-        public string host = @"http://httpbin.org/post";
+        public string host = @"http://httpbin.org/post";//ALTERAR PARA ENDEREÇO DO SERVIDOR
         bool enable = true;
 
         public MainPage()
@@ -37,7 +37,7 @@ namespace SWAutomacao
                 {
                     HttpResponseMessage response = await webService.PostAsync(host, contentPost);
                     
-                    await DisplayAlert("BRANCO", await response.Content.ReadAsStringAsync(), "FECHAR");
+                    await DisplayAlert("BRANCO", "SOLICITAÇÃO ENVIADA"/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
 
                 }
                 catch (Exception ex)
@@ -58,7 +58,7 @@ namespace SWAutomacao
                 try
                 {
                     HttpResponseMessage response = await webService.PostAsync(host, contentPost);
-                    await DisplayAlert("VERMELHO", await response.Content.ReadAsStringAsync(), "FECHAR");
+                    await DisplayAlert("VERMELHO", "SOLICITAÇÃO ENVIADA"/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
                 }
                 catch (Exception ex)
                 {
@@ -78,7 +78,7 @@ namespace SWAutomacao
                 try
                 {
                     HttpResponseMessage response = await webService.PostAsync(host, contentPost);
-                    await DisplayAlert("AZUL", await response.Content.ReadAsStringAsync(), "FECHAR");
+                    await DisplayAlert("AZUL", "SOLICITAÇÃO ENVIADA"/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
                 }
                 catch (Exception ex)
                 {
