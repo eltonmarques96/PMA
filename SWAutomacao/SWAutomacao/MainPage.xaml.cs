@@ -19,7 +19,7 @@ namespace SWAutomacao
         
         IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
        
-        static IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse("192.168.0.100"), 2018);
+        static IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse("192.168.0.90"), 2018);
 
         Socket clientSocket = new Socket(remoteEP.AddressFamily, SocketType.Stream,ProtocolType.Tcp);
 
