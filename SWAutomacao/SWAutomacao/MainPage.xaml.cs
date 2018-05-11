@@ -41,7 +41,11 @@ namespace SWAutomacao
                 {
                     //HttpResponseMessage response = await webService.PostAsync(host, contentPost);
                     string returndata = OnSend(obj.Color, obj.Item);
-                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
+                    while (returndata != "" && returndata != null)
+                    {
+                        await DisplayAlert("AGUARDE", "EM PRODUÇÃO", "FECHAR");
+                    }
+                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata, "FECHAR");
                 }
                 catch (Exception ex)
                 {
@@ -93,8 +97,11 @@ namespace SWAutomacao
                 {
                     //HttpResponseMessage response = await webService.PostAsync(host, contentPost);
                     string returndata = OnSend(obj.Color, obj.Item);
-                    // await DisplayAlert("ENVIADO", returndata, "Fechar"); 
-                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
+                    while (returndata != "" && returndata != null)
+                    {
+                        await DisplayAlert("AGUARDE", "EM PRODUÇÃO", "FECHAR");
+                    }
+                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata, "FECHAR");
                 }
                 catch (Exception ex)
                 {
@@ -115,7 +122,12 @@ namespace SWAutomacao
                 {
                     //HttpResponseMessage response = await webService.PostAsync(host, contentPost);
                     string returndata = OnSend(obj.Color, obj.Item);
-                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata/*await response.Content.ReadAsStringAsync()*/, "FECHAR");
+                    while (returndata != "" && returndata != null)
+                    {
+                        await DisplayAlert("AGUARDE", "EM PRODUÇÃO", "FECHAR");
+                    }
+
+                    await DisplayAlert("CÓDIGO DO PEDIDO", returndata, "FECHAR");
                 }
                 catch (Exception ex)
                 {
