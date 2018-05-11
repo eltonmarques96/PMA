@@ -25,16 +25,13 @@ namespace SWAutomacao
 
 
         public MainPage()
-        {
-            
+        {            
             InitializeComponent();
         }
-
         
         public async void OnClickWhitePadlock(object sender, EventArgs e)
         {
             SendObj obj = new SendObj() { Item = "cadeado", Color = "0" }; //0 branco
-
 
             if (enable)
             {
@@ -56,20 +53,7 @@ namespace SWAutomacao
 
         private string OnSend(string color, string item)
         {
-            //Load();
-            ////NetworkStream serverStream = clientSocket.GetStream();
-            //byte[] outStream = System.Text.Encoding.ASCII.GetBytes("0:" + color);// BRANCO :0 
-            ////serverStream.Write(outStream, 0, outStream.Length);          // AZUL :1 
-            ////serverStream.Flush();                                        //VERMELHO :2
-
-            //clientSocket.Send(outStream);
-
-
-            //byte[] inStream = new byte[1024];
-            //clientSocket.Receive(inStream);
-            ////serverStream.Read(inStream, 0, (int)clientSocket.ReceiveBufferSize);
-            //string returndata = System.Text.Encoding.UTF8.GetString(inStream);
-
+            
             TcpClient tcpClient = new TcpClient();
             tcpClient.Connect("192.168.0.90", 2018);
 
@@ -87,14 +71,6 @@ namespace SWAutomacao
 
             int k = stream.Read(ByteArrayReturnAscEnc, 0, 100);
 
-            /*StringBuilder stringBuilder = new StringBuilder();
-            for(int i = 0; i < k; i++)
-            {
-                if(!(ByteArrayReturnAscEnc[i] == 13 || ByteArrayReturnAscEnc[i] == 10))
-                {
-                    stringBuilder.Append(ByteArrayReturnAscEnc[i]);
-                }   
-            }*/
             string result = System.Text.Encoding.UTF8.GetString(ByteArrayReturnAscEnc);
 
             return result;
@@ -104,7 +80,6 @@ namespace SWAutomacao
         {
             clientSocket.Connect(remoteEP);
         }
-
 
         public async void OnClickRedPadlock(object sender, EventArgs e)
         {
